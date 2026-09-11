@@ -2,7 +2,7 @@
 
 TravelTrucks is a campervan rental platform where visitors can browse a fleet of motorhomes and panel vans, narrow the list down to the camper that fits their trip, save favorites for later, and send a booking request straight from the listing.
 
-Live demo: _(coming soon)_
+Live: https://traveltruck.vercel.app
 
 ## Features
 

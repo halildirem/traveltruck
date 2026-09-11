@@ -1,0 +1,12 @@
+.stars {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.active {
+  color: var(--color-star);
+}
+
+.inactive {
+  color: var(--color-border);
+}

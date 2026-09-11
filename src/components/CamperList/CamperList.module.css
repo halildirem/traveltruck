@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+@media (max-width: 640px) {
+  .list {
+    gap: 20px;
+  }
+
+  .more {
+    margin-top: 32px;
+  }
+
+  .more button {
+    width: 100%;
+  }
+}

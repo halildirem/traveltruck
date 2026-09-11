@@ -1,0 +1,67 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.primary {
+  padding: 16px 60px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.primary:hover:not(:disabled),
+.primary:focus-visible {
+  background-color: var(--color-accent-hover);
+}
+
+.secondary {
+  padding: 15px 24px;
+  background-color: var(--color-white);
+  color: var(--color-main);
+  border: 1px solid var(--color-border);
+}
+
+.secondary:hover:not(:disabled),
+.secondary:focus-visible {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.showMore {
+  padding: 12px 42px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.showMore:hover:not(:disabled),
+.showMore:focus-visible {
+  background-color: var(--color-accent-hover);
+}
+
+@media (max-width: 640px) {
+  .primary {
+    padding: 14px 32px;
+  }
+
+  .showMore {
+    padding: 12px 28px;
+  }
+
+  .secondary {
+    padding: 13px 20px;
+  }
+}

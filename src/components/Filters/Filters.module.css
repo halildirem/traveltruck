@@ -1,0 +1,190 @@
+.sidebar {
+  flex-shrink: 0;
+  width: 361px;
+  padding: 24px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 16px;
+  color: var(--color-main);
+}
+
+.inputWrap {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  color: var(--color-muted);
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  padding: 18px 20px 18px 46px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-white);
+  font-size: 16px;
+  color: var(--color-main);
+}
+
+.input::placeholder {
+  color: var(--color-muted);
+}
+
+.input:focus-visible {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.title {
+  margin-top: 32px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-main);
+}
+
+.group {
+  margin-top: 24px;
+}
+
+.legend {
+  margin-bottom: 14px;
+  font-size: 16px;
+  color: var(--color-muted);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 16px;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-main);
+  cursor: pointer;
+  user-select: none;
+}
+
+.control input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.radio,
+.checkbox {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color-border);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.radio {
+  border-radius: 50%;
+}
+
+.checkbox {
+  border-radius: 6px;
+  color: transparent;
+}
+
+.control input:checked ~ .radio {
+  border-color: var(--color-main);
+}
+
+.control input:checked ~ .radio::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-main);
+}
+
+.control input:checked ~ .checkbox {
+  border-color: var(--color-main);
+  background-color: var(--color-main);
+  color: var(--color-white);
+}
+
+.control input:focus-visible ~ .radio,
+.control input:focus-visible ~ .checkbox {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.actions button {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 100%;
+  }
+
+  .optionsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar {
+    padding: 20px;
+  }
+
+  .title {
+    margin-top: 24px;
+  }
+
+  .group {
+    margin-top: 20px;
+  }
+
+  .optionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .actions {
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 380px) {
+  .optionsGrid {
+    grid-template-columns: 1fr;
+  }
+}

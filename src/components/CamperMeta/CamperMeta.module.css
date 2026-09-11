@@ -1,0 +1,23 @@
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+  font-size: 16px;
+  color: var(--color-main);
+}
+
+.rating,
+.location {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star {
+  color: var(--color-star);
+}
+
+.reviews {
+  text-decoration: underline;
+}
